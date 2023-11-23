@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>PW</title>
+    
+        <a href="index.html">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gloock&family=Libre+Baskerville:wght@700&family=Lilita+One&display=swap');
+            </style>
+        </a>
+    <style>
+        body {
+            font-family: 'Barlow', 'Corben', 'Roboto', sans-serif;
+            background-color: #000022;
+        }
+        .container {
+            color: #c6d4e1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            text-align: center;
+            background-color: #2a2e50;
+            padding: 15px;
+            border-radius: 15px;
+            border: solid 8px #0e0f31;
+        }
+        h1 {
+            font-size: 45px;
+            padding: 5px;
+        }
+        p {
+            font-size: 21px;
+        }
+        input {
+            background: #0e0f31;
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: solid 3px #c6d4e1;
+            color: #c6d4e1;
+        }
+        button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #c6d4e1;
+            color: #000022;
+            font-weight: bolder;
+            font-size: 15px;
+            border: solid 3px #0e0f31;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        /* Estilos da navbar */
+        nav {
+            background-color: #0e0f31;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #c6d4e1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        body {
+            font-family: 'Barlow', 'Corben', 'Roboto', sans-serif;
+            background-color: #000022;
+        }
+
+        .container {
+            color: #c6d4e1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            text-align: center;
+            background-color: #2a2e50;
+            padding: 15px;
+            border-radius: 15px;
+            border: solid 8px #0e0f31;
+        }
+
+        h1 {
+            font-size: 45px;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        input {
+            background: #0e0f31;
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: solid 3px #c6d4e1;
+            color: #c6d4e1;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #c6d4e1;
+            color: #000022;
+            font-weight: bolder;
+            font-size: 15px;
+            border: solid 3px #0e0f31;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="exercicio1.html">Exercício 1</a>
+        <a href="exercicio2.html">Exercício 2</a>
+        <a href="exercicio3.html">Exercício 3</a>
+        <a href="exercicio4.html">Exercício 4</a>
+        <a href="exercicio5.html">Exercício 5</a>
+        <a href="exercicio6.html">Exercício 6</a>
+        <a href="exercicio7.html">Exercício 7</a>
+    </nav>
+
+    <div class="container">
+        <h1>Exercicio 4</h1>
+        <p>Quilometragem percorrida (km):</p>
+        <input type="number" id="kilometers" placeholder="Quilometragem">
+        <p>Valor do combustivel por litro (R$/litro):</p>
+        <input type="number" id="fuelPrice" placeholder="Preço do Combustível">
+        <button onclick="calculateExpense()">Calcular Gasto</button>
+        <p>Gasto Total (R$):</p>
+        <div id="totalExpense"></div>
+    </div>
+    
+    <script>
+        function calculateExpense() {
+            var kilometers = parseFloat(document.getElementById("kilometers").value);
+            var fuelPrice = parseFloat(document.getElementById("fuelPrice").value);
+            var mileage = 8; // Veículo percorre 8 km por litro
+            
+            var totalExpense = (kilometers / mileage) * fuelPrice;
+            
+            document.getElementById("totalExpense").innerText = "R$ " + totalExpense.toFixed(2);
+        }
+    </script>
+</body>
+</html>

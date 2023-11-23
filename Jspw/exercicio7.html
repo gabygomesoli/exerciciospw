@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>PW</title>
+    
+        <a href="index.html">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gloock&family=Libre+Baskerville:wght@700&family=Lilita+One&display=swap');
+            </style>
+        </a>
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Corben', serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000022;
+        }
+        .container {
+            color: #c6d4e1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            text-align: center;
+            background-color: #2a2e50;
+            padding: 15px;
+            border-radius: 15px;
+            border: solid 8px #0e0f31;
+        }
+        h1 {
+            font-size: 45px;
+            padding: 5px;
+        }
+        p {
+            font-size: 21px;
+        }
+        input {
+            background: #0e0f31;
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: solid 3px #c6d4e1;
+            color: #c6d4e1;
+        }
+        button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #c6d4e1;
+            color: #000022;
+            font-weight: bolder;
+            font-size: 15px;
+            border: solid 3px #0e0f31;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        /* Estilos da navbar */
+        nav {
+            background-color: #0e0f31;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #c6d4e1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        body {
+            font-family: 'Barlow', 'Corben', 'Roboto', sans-serif;
+            background-color: #000022;
+        }
+
+        .container {
+            color: #c6d4e1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            text-align: center;
+            background-color: #2a2e50;
+            padding: 15px;
+            border-radius: 15px;
+            border: solid 8px #0e0f31;
+        }
+
+        h1 {
+            font-size: 45px;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        input {
+            background: #0e0f31;
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: solid 3px #c6d4e1;
+            color: #c6d4e1;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #c6d4e1;
+            color: #000022;
+            font-weight: bolder;
+            font-size: 15px;
+            border: solid 3px #0e0f31;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="exercicio1.html">Exercício 1</a>
+        <a href="exercicio2.html">Exercício 2</a>
+        <a href="exercicio3.html">Exercício 3</a>
+        <a href="exercicio4.html">Exercício 4</a>
+        <a href="exercicio5.html">Exercício 5</a>
+        <a href="exercicio6.html">Exercício 6</a>
+        <a href="exercicio7.html">Exercício 7</a>
+    </nav>
+
+    <div class="container">
+        <h1>Insira N valores:</h1>
+        <input type="text" id="valor">
+        <button onclick="adicionarValor()">Adicionar Valor</button>
+        <br>
+        <button onclick="mostrarValores()">Mostrar Valores</button>
+        <button onclick="mostrarMaiorValor()">Maior Valor</button>
+        <button onclick="mostrarMenorValor()">Menor Valor</button>
+
+        <p id="valoresInseridos"></p>
+        <p id="maiorValor"></p>
+        <p id="menorValor"></p>
+    </div>
+
+    <script>
+        var vetor = [];
+        
+        function adicionarValor() {
+            var valor = document.getElementById("valor").value;
+            vetor.push(parseFloat(valor));
+            document.getElementById("valor").value = "";
+        }
+        
+        function mostrarValores() {
+            document.getElementById("valoresInseridos").innerHTML = "Valores Inseridos: " + vetor.join(", ");
+        }
+        
+        function mostrarMaiorValor() {
+            var max = Math.max(...vetor);
+            document.getElementById("maiorValor").innerHTML = "Maior Valor: " + max;
+        }
+        
+        function mostrarMenorValor() {
+            var min = Math.min(...vetor);
+            document.getElementById("menorValor").innerHTML = "Menor Valor: " + min;
+        }
+    </script>
+</body>
+</html>
